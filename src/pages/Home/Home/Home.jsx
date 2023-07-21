@@ -1,10 +1,12 @@
+import College from "../Colleges/Colleges";
+
  
 const Home = () => {
     return (
         <div>
             {/* components will be called here */}
-            <p>this is home section</p>
-            
+            <College></College>
+
         </div>
     );
 };
