@@ -8,7 +8,7 @@ const College = ({college}) => {
     return (
         <>
            <div className="card card-compact w-96 bg-base-100 shadow-xl">
-            <figure><img src={college_image} alt="Shoes" /></figure>
+            <figure><img src={college_image} alt="Image" /></figure>
             <div className="card-body">
                 <h2 className="card-title"> {college_name} </h2>
                 <div>

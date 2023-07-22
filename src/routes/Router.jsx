@@ -3,6 +3,8 @@ import Main from "../layouts/Main";
 import Home from "../pages/Home/Home/Home";
 import Details from "../pages/Details/Details";
 import Research from "../pages/Home/Research/Research";
+import AllCollege from "../pages/AllCollege/AllCollege";
+import Addmission from "../pages/Addmission/Addmission";
  
 const router = createBrowserRouter([
     {
@@ -21,6 +23,14 @@ const router = createBrowserRouter([
             {
                 path: '/research',
                 element: <Research></Research>
+            },
+            {
+                path: '/allcollege',
+                element: <AllCollege></AllCollege>
+            },
+            {
+                path: 'addmission',
+                element: <Addmission></Addmission>
             }
              
         ]

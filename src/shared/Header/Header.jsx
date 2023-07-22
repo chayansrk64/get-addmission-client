@@ -3,7 +3,7 @@ import './Header.css'
 const Header = () => {
     const links = <>
         <Link to="/"><a className='me-3'>Home</a></Link>
-        <Link to="/collete"><a className='me-3'>Colleges</a></Link>
+        <Link to="/allcollege"><a className='me-3'>Colleges</a></Link>
         <Link to="/addmission"><a className='me-3'>Addmission</a></Link>
         <Link to="/mycollege"><a className='me-3'>My College</a></Link>
          
