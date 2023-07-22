@@ -1,10 +1,11 @@
-import { createBrowserRouter } from "react-router-dom";
+import {  createBrowserRouter } from "react-router-dom";
 import Main from "../layouts/Main";
 import Home from "../pages/Home/Home/Home";
 import Details from "../pages/Details/Details";
 import Research from "../pages/Home/Research/Research";
 import AllCollege from "../pages/AllCollege/AllCollege";
 import Addmission from "../pages/Addmission/Addmission";
+import Form from "../pages/Form/Form";
  
 const router = createBrowserRouter([
     {
@@ -29,8 +30,14 @@ const router = createBrowserRouter([
                 element: <AllCollege></AllCollege>
             },
             {
-                path: 'addmission',
+                path: '/addmission',
                 element: <Addmission></Addmission>
+            },
+            {
+                path: '/form/:id',
+                element: <Form></Form>,
+                loader: ({params}) => fetch(`http://localhost:5000/college/${params.id}`)
+                 
             }
              
         ]
