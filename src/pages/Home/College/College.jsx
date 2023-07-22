@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 
  
 const College = ({college}) => {
-   console.log(college);
-   const {college_name, college_image, admission_dates, events, research_history, sports
+//    console.log(college);
+   const {_id, college_name, college_image, admission_dates, events, research_history, sports
    } =  college;
     return (
         <>
@@ -25,7 +25,7 @@ const College = ({college}) => {
                     {sports.map(sport => <p>{sport.sport_name}</p>)}
                 </div>
                 <div className="card-actions justify-end">
-                <Link to="/details" className="btn btn-primary">Details</Link>
+                <Link to={`/college/${_id}`} className="btn btn-primary">Details</Link>
                 </div>
             </div>
             </div>
