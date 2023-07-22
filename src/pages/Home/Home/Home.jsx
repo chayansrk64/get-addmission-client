@@ -1,5 +1,6 @@
 import College from "../Colleges/Colleges";
 import Gallery from "../Gallery/Gallery";
+import Research from "../Research/Research";
 
  
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
             {/* components will be called here */}
             <College></College>
             <Gallery></Gallery>
+            <Research></Research>
         </div>
     );
 };
