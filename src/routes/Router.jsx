@@ -6,6 +6,8 @@ import Research from "../pages/Home/Research/Research";
 import AllCollege from "../pages/AllCollege/AllCollege";
 import Addmission from "../pages/Addmission/Addmission";
 import Form from "../pages/Form/Form";
+import MyCollege from "../pages/MyCollege/MyCollege";
+import Review from "../pages/Review/Review";
  
 const router = createBrowserRouter([
     {
@@ -38,6 +40,14 @@ const router = createBrowserRouter([
                 element: <Form></Form>,
                 loader: ({params}) => fetch(`http://localhost:5000/college/${params.id}`)
                  
+            },
+            {
+                path: '/mycollege',
+                element: <MyCollege></MyCollege>
+            },
+            {
+                path: "/review",
+                element: <Review></Review>
             }
              
         ]

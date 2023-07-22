@@ -16,9 +16,9 @@ const Form = () => {
         const address = form.address.value;
         const dob = form.dob.value;
         const image = form.image.value;
-        
-
-        const student = {name, email, select, image, phone, address, dob, image  }
+        const college = data.college_name;
+        const details = data.research_history;
+        const student = {name, email, select, image, phone, address, dob, image, college, details  }
         console.log(student);
 
 
@@ -32,6 +32,7 @@ const Form = () => {
         .then(res => res.json())
         .then(data => {
             console.log(data);
+            
         })
 
 
@@ -59,6 +60,7 @@ const Form = () => {
                  <input type="text" name="address" placeholder="Candidate  address" className="mb-3 input input-bordered w-full  " /> 
                  <input type="date" name="dob" placeholder="Candidate  dob" className="mb-3 input input-bordered w-full  " /> 
                 <input type="text" name="image" placeholder="Candidate  image" className="mb-3 input input-bordered w-full  " />
+                {/* <input type="text" defaultValue={data.college_name} name="college" placeholder="college name" className="mb-3 input input-bordered w-full  " /> */}
                 <input type="submit" value="Submit"  className="mb-3 input input-bordered w-1/2 btn btn-primary  " />
 
                 </form>
