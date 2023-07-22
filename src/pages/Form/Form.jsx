@@ -20,6 +20,21 @@ const Form = () => {
 
         const student = {name, email, select, image, phone, address, dob, image  }
         console.log(student);
+
+
+        fetch('http://localhost:5000/students', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(student)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+        })
+
+
     }
 
     return (
