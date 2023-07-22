@@ -1,4 +1,5 @@
 import College from "../Colleges/Colleges";
+import Gallery from "../Gallery/Gallery";
 
  
 const Home = () => {
@@ -6,7 +7,7 @@ const Home = () => {
         <div>
             {/* components will be called here */}
             <College></College>
-
+            <Gallery></Gallery>
         </div>
     );
 };

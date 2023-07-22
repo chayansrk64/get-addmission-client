@@ -11,7 +11,8 @@ const Details = () => {
             <div>
                 <div className="w-9/12 mx-auto py-5"><img src={college_image} alt="" /></div>
                 <div className="grid grid-cols-1 md:grid-cols-2">
-                    <div></div>
+                    <div className="flex"><h2>Know {college_name} College</h2></div>
+                    {/* college details */}
                     <div>
                         <h2 className="text-3xl font-semibold py-3">{college_name}</h2>
                          <div>
