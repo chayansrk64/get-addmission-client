@@ -49,11 +49,11 @@ const router = createBrowserRouter([
             },
             {
                 path: '/mycollege',
-                element: <PrivateRoute><MyCollege></MyCollege></PrivateRoute>
+                element: <MyCollege></MyCollege>
             },
             {
                 path: "/review",
-                element: <Review></Review>
+                element: <PrivateRoute><Review></Review></PrivateRoute>
             },
             {
                 path: '/reviewsection',
