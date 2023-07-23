@@ -1,11 +1,17 @@
 import { Link } from 'react-router-dom';
 import './Header.css'
+import { useContext } from 'react';
+import { AuthContext } from '../../providers/AuthProvider';
 const Header = () => {
+
+  //  const {user} = useContext(AuthContext)
+
     const links = <>
         <Link to="/"><a className='me-3'>Home</a></Link>
         <Link to="/allcollege"><a className='me-3'>Colleges</a></Link>
         <Link to="/addmission"><a className='me-3'>Addmission</a></Link>
         <Link to="/mycollege"><a className='me-3'>My College</a></Link>
+        
          
          
     </>
@@ -28,8 +34,11 @@ const Header = () => {
       {links}
     </ul>
   </div>
+  {/* login and register */}
   <div className="navbar-end">
-    <a className="btn">Login</a>
+
+        <Link to="/login"><a className='me-3'>Login</a></Link>
+        <Link to="/register"><a className='me-3'>register</a></Link>
   </div>
 </div>
     );

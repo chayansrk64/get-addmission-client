@@ -9,6 +9,8 @@ import Form from "../pages/Form/Form";
 import MyCollege from "../pages/MyCollege/MyCollege";
 import Review from "../pages/Review/Review";
 import ReviewSection from "../pages/Home/ReviewSection/ReviewSection";
+import Login from "../pages/Login/Login";
+import Register from "../pages/Register/Register";
  
 const router = createBrowserRouter([
     {
@@ -53,6 +55,14 @@ const router = createBrowserRouter([
             {
                 path: '/reviewsection',
                 element: <ReviewSection></ReviewSection>
+            },
+            {
+                path: '/login',
+                element: <Login></Login>
+            },
+            {
+                path: '/register',
+                element: <Register></Register>
             }
              
         ]
