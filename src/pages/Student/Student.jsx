@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
  
 const Student = ({student}) => {
-    console.log(student);
+    // console.log(student);
     const {_id, name, email, image, phone, select, dob, address, college, details} = student;
     return (
         <div>

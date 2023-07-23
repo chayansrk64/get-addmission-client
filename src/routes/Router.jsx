@@ -11,6 +11,7 @@ import Review from "../pages/Review/Review";
 import ReviewSection from "../pages/Home/ReviewSection/ReviewSection";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
+import PrivateRoute from "./PrivateRoute";
  
 const router = createBrowserRouter([
     {
@@ -46,7 +47,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/mycollege',
-                element: <MyCollege></MyCollege>
+                element: <PrivateRoute><MyCollege></MyCollege></PrivateRoute>
             },
             {
                 path: "/review",

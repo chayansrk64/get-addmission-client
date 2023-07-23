@@ -1,12 +1,17 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
+import SocialLogin from "../../shared/SocialLogIn/SocialLogIn";
 
  
 const Login = () => {
 
     const {signIn} = useContext(AuthContext);
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const from = location.state?.from?.pathname || "/";
 
     const handleLogin = event => {
         event.preventDefault();
@@ -26,6 +31,7 @@ const Login = () => {
                 showConfirmButton: false,
                 timer: 1500
               })
+              navigate(from, { replace: true });
         })
 
     }
@@ -63,8 +69,8 @@ const Login = () => {
     </div>
   </form>
      <p className='p-3'><small>New here? <Link to='/register' className='text-warning'>Create an Account</Link> </small></p>
-     <div className='text-center mb-4'>
-       {/* <SocialLogin></SocialLogin> */}
+     <div className='text-center mb-4 p-3'>
+       <SocialLogin></SocialLogin>
      </div>
 </div>
 </div>

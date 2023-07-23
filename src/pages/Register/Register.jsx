@@ -1,17 +1,22 @@
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+
+import Swal from "sweetalert2";
+import SocialLogin from "../../shared/SocialLogIn/SocialLogIn";
 
  
 const Register = () => {
 
-    const {createUser} = useContext(AuthContext)
+    const {createUser, updateUserProfile} = useContext(AuthContext);
+    const navigate = useNavigate()
 
     const {
         register,
         handleSubmit,
         watch,
+        reset,
         formState: { errors },
       } = useForm()
     
@@ -21,6 +26,37 @@ const Register = () => {
         .then(result => {
             const loggedUser = result.user;
             console.log(loggedUser);
+            updateUserProfile(data.name, data.email)
+            .then(()=> {
+
+                const saveUser = {name: data.name, email: data.email}
+
+                fetch('http://localhost:5000/users', {
+                    method: "POST",
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(saveUser)
+                })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    if(data.insertedId){
+                        reset();
+                        Swal.fire({
+                           position: 'top-center',
+                           icon: 'success',
+                           title: 'User Profile Updated',
+                           showConfirmButton: false,
+                           timer: 1500
+                         })
+                         navigate('/')
+                    }
+                })
+
+               
+            })
+            .catch(error => console.log(error))
         })
       }
     
@@ -74,7 +110,7 @@ const Register = () => {
   </form>
      <p className='p-3'><small>Already Have an Account? <Link to='/login' className='text-warning'>Login</Link> </small></p>
      <div className='text-center mb-4'>
-       {/* <SocialLogin></SocialLogin> */}
+        <SocialLogin></SocialLogin>
      </div>
 </div>
 </div>

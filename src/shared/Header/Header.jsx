@@ -51,6 +51,9 @@ const Header = () => {
   </div>
   {/* login and register */}
   <div className="navbar-end">
+
+    <Link to="/user"><a className='me-3'>{user?.displayName}</a></Link>
+        
       {
         user ? <> <button  onClick={handleLogOut} className="btn btn-ghost">LogOut</button> </> 
         : <> <Link to="/login"><a className='me-3'>Login</a></Link></>
