@@ -8,6 +8,7 @@ import Addmission from "../pages/Addmission/Addmission";
 import Form from "../pages/Form/Form";
 import MyCollege from "../pages/MyCollege/MyCollege";
 import Review from "../pages/Review/Review";
+import ReviewSection from "../pages/Home/ReviewSection/ReviewSection";
  
 const router = createBrowserRouter([
     {
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
             {
                 path: "/review",
                 element: <Review></Review>
+            },
+            {
+                path: '/reviewsection',
+                element: <ReviewSection></ReviewSection>
             }
              
         ]
