@@ -1,15 +1,14 @@
  
 import { Link } from 'react-router-dom';
-import colleges from './../Home/Colleges/Colleges';
-
+ 
 const CollegeCard = ({colleges}) => {
-    console.log(colleges);
+    // console.log(colleges);
     const {_id, college_name, college_image, admission_dates, ratings
     ,events, research_history, sports, number_of_research,
     } =  colleges;
     return (
         <>
-            <div className="card card-compact w-96 bg-base-100 shadow-xl">
+            <div className="card  card-compact w-96 bg-base-100 shadow-xl">
             <figure><img src={college_image} alt="Image" /></figure>
             <div className="card-body">
                 <h2 className="card-title"> {college_name} </h2>

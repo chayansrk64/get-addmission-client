@@ -22,16 +22,16 @@ const Header = () => {
    }
 
     const links = <>
-        <Link to="/"><a className='me-3'>Home</a></Link>
-        <Link to="/allcollege"><a className='me-3'>Colleges</a></Link>
-        <Link to="/addmission"><a className='me-3'>Addmission</a></Link>
-        <Link to="/mycollege"><a className='me-3'>My College</a></Link>
-        
+        <Link to="/"><a className='me-3 text-lg'>Home</a></Link>
+        <Link to="/allcollege"><a className='me-3 text-lg'>Colleges</a></Link>
+        <Link to="/addmission"><a className='me-3 text-lg'>Addmission</a></Link>
+        <Link to="/mycollege"><a className='me-3 text-lg'>My College</a></Link>
+        <Link to="/profile"><a className='me-3 text-lg'>{user?.displayName}</a></Link>
          
          
     </>
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar fixed z-10 bg-base-100">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -52,7 +52,7 @@ const Header = () => {
   {/* login and register */}
   <div className="navbar-end">
 
-    <Link to="/user"><a className='me-3'>{user?.displayName}</a></Link>
+    {/* <Link to="/profile"><a className='me-3'>{user?.displayName}</a></Link> */}
         
       {
         user ? <> <button  onClick={handleLogOut} className="btn btn-ghost">LogOut</button> </> 

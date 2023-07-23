@@ -11,12 +11,12 @@ const Addmission = () => {
         .then(data => setMyColleges(data))
     }, [])
     return (
-        <div className="my-5">
+        <div className="pt-20">
             <SectionTitle heading="Choose Your College"></SectionTitle>
-            <div className="flex flex-col items-center gap-3 my-10">
+            <div className="flex flex-col items-center gap-3 my-10 text-2xl">
                 {myColleges.map(myCollege =>  
                     
-                    <Link to={`/form/${myCollege._id}`}>{myCollege.college_name}</Link>
+                    <Link className="hover:underline" to={`/form/${myCollege._id}`}>{myCollege.college_name}</Link>
 
                     )} 
             </div>

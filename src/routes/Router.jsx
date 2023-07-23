@@ -12,6 +12,8 @@ import ReviewSection from "../pages/Home/ReviewSection/ReviewSection";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import PrivateRoute from "./PrivateRoute";
+import Profile from "../pages/Profile/Profile";
+import Error from "../pages/Error/Error";
  
 const router = createBrowserRouter([
     {
@@ -64,9 +66,19 @@ const router = createBrowserRouter([
             {
                 path: '/register',
                 element: <Register></Register>
-            }
+            },
+            {
+                path: '/profile',
+                element: <Profile></Profile>
+            },
+           
              
         ]
+    },
+        // Error page route
+    {
+        path: '/*',
+        element: <Error></Error>
     }
 ])
 

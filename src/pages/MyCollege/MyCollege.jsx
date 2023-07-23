@@ -13,15 +13,15 @@ const MyCollege = () => {
     }, [])
 
     return (
-        <div>
+        <div className="pt-20 mb-10">
            <SectionTitle heading="Students & Colleges info"></SectionTitle>
 
-        <div>
+        <div className="mt-10">
 
-        </div>
             {
                 students.map(student =>  <Student student={student} key={student._id}></Student> )
             }
+        </div>
         </div>
     );
 };
