@@ -1,9 +1,10 @@
 import Swal from "sweetalert2";
 import SectionTitle from "../../components/SectionTitle";
-
+ 
  
 const Review = () => {
 
+    
     const handleReview = event => {
         event.preventDefault();
         const form = event.target;
