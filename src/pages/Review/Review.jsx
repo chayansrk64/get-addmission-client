@@ -1,3 +1,4 @@
+import Swal from "sweetalert2";
 import SectionTitle from "../../components/SectionTitle";
 
  
@@ -8,8 +9,30 @@ const Review = () => {
         const form = event.target;
         const review = form.review.value;
         const ratings = parseInt(form.ratings.value);
-        const data = {review, ratings};
-        console.log(data);
+        const reviewData = {review, ratings};
+        console.log(reviewData);
+
+        fetch('http://localhost:5000/reviews', {
+            method: "POST",
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(reviewData)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            if(data.insertedId){
+                Swal.fire({
+                    position: 'top-center',
+                    icon: 'success',
+                    title: 'Review Added Successfully!',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+                  
+            }
+        })
 
     }
 
