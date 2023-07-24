@@ -13,13 +13,13 @@ const CollegeCard = ({colleges}) => {
             <div className="card-body">
                 <h2 className="card-title"> {college_name} </h2>
                 <div>
-                    <p>College Ratings: {ratings} </p>
+                    <p className='font-bold'>College Ratings: {ratings} </p>
                 </div>
                 <div>
-                    <p>Number of Research: {number_of_research} </p>
+                    <p className='font-bold'>Number of Research: {number_of_research} </p>
                 </div>
                 <div>
-                   <p> Addmission Date:</p>
+                   <p className='font-bold'> Addmission Date:</p>
                  <div className="flex"><p>{admission_dates.fall}</p>
                 <p>{admission_dates.spring}</p></div>
                 </div>

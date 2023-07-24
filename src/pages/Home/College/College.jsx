@@ -12,17 +12,19 @@ const College = ({college}) => {
             <div className="card-body">
                 <h2 className="card-title"> {college_name} </h2>
                 <div>
-                   <p> Addmission Date:</p>
+                   <p className="font-bold"> Addmission Date:</p>
                  <div className="flex"><p>{admission_dates.fall}</p>
                 <p>{admission_dates.spring}</p></div>
                 </div>
-                <div>
-                   Events: {events.map(event => <p>{event.event_name}</p> )}
+                <div className="font-semibold flex">
+                   Events: &nbsp; {events.map(event => <p>{event.event_name}</p> )}
              </div>
-                <p>{research_history}</p>
-                <div>
-                    <p>Sports:</p>
-                    {sports.map(sport => <p>{sport.sport_name}</p>)}
+                <p> <span className="font-bold">Research History:</span> {research_history}</p>
+                <div className="flex">
+                    <p className="font-bold">Sports:</p>
+                    {sports.map(sport => <p>
+                        {sport.sport_name} 
+                    </p>)}
                 </div>
                 <div className="card-actions justify-end">
                 <Link to={`/college/${_id}`} className="btn btn-primary">Details</Link>

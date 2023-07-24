@@ -11,13 +11,13 @@ const Student = ({student}) => {
                 <img src={image} className="max-w-sm rounded-lg shadow-2xl" />
                 <div className="">
                 <h1 className="text-5xl font-bold">{name}</h1>
-                <p className=" "> Email: {email}</p>
-                <p className=" "> Subject: {select}</p>
-                <p className=" "> Phone: {phone}</p>
-                <p className=" "> Date of birth: {dob}</p>
-                <p className=" "> Address: {address}</p>
-                <p className=" "> College: {college}</p>
-                <p className=" "> Details: {details}</p>
+                <p className="font-semibold"> Email: {email}</p>
+                <p className=" font-semibold"> Subject: {select}</p>
+                <p className=" font-semibold"> Phone: {phone}</p>
+                <p className=" font-semibold"> Date of birth: {dob}</p>
+                <p className=" font-semibold"> Address: {address}</p>
+                <p className="  "> <span className="font-bold">College:</span> {college}</p>
+                <p className="  "> <span className="font-bold">Details:</span> {details}</p>
                 <Link to="/review" className="btn btn-primary">Add a review</Link>
                 </div>
             </div>

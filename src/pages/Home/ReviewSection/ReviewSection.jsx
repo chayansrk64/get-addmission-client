@@ -51,7 +51,7 @@ const ReviewSection = () => {
                 <div className="w-24 rounded-full mx-auto ">
                  <img src="https://cdni.iconscout.com/illustration/premium/thumb/reviews-concept-for-landing-page-vector-5621922-4680779.png" />
                  </div>
-                 <p className="text-center font-bold text-xl"> {user.displayName} </p>
+                 <p className="text-center font-bold text-xl"> {user?.displayName} </p>
                   {slider.review} 
                  <p className="text-center font-bold text-xl">ratings: {slider.ratings} </p>
                 

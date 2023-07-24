@@ -30,8 +30,8 @@ const Details = () => {
       </tr>
     </thead>
     <tbody>
-      { events.map(event =>  <tr>
-        <th>1</th>
+      { events.map((event, index) =>  <tr>
+        <th>{index + 1}</th>
         <td>{event.event_name}</td>
         <td> {event.date} </td>
         <td>{event.location} </td>
@@ -66,8 +66,8 @@ const Details = () => {
       </tr>
     </thead>
     <tbody>
-      {sports.map(sport => <tr>
-        <th>1</th>
+      {sports.map((sport, index) => <tr>
+        <th>{index + 1}</th>
         <td>{sport.sport_name}</td>
         <td>{sport.season}</td>
         <td>{sport.coach}</td>

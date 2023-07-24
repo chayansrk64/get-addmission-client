@@ -3,6 +3,7 @@ import './Header.css'
 import { useContext } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
 import Swal from 'sweetalert2';
+import ActiveLink from '../../components/ActiveLink/ActiveLink';
 const Header = () => {
 
    const {user, logOut} = useContext(AuthContext)
@@ -22,11 +23,11 @@ const Header = () => {
    }
 
     const links = <>
-        <Link to="/"><a className='me-3 text-lg'>Home</a></Link>
-        <Link to="/allcollege"><a className='me-3 text-lg'>Colleges</a></Link>
-        <Link to="/addmission"><a className='me-3 text-lg'>Addmission</a></Link>
-        <Link to="/mycollege"><a className='me-3 text-lg'>My College</a></Link>
-        <Link to="/profile"><a className='me-3 text-lg'>{user?.displayName}</a></Link>
+        <ActiveLink to="/"><a className='me-3 text-lg'>Home</a></ActiveLink>
+        <ActiveLink to="/allcollege"><a className='me-3 text-lg'>Colleges</a></ActiveLink>
+        <ActiveLink to="/addmission"><a className='me-3 text-lg'>Addmission</a></ActiveLink>
+        <ActiveLink to="/mycollege"><a className='me-3 text-lg'>My College</a></ActiveLink>
+        <ActiveLink to="/profile"><a className='me-3 text-lg'>{user?.displayName}</a></ActiveLink>
          
          
     </>
