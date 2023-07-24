@@ -22,7 +22,7 @@ const Form = () => {
         console.log(student);
 
 
-        fetch('http://localhost:5000/students', {
+        fetch('https://get-addmission-server.vercel.app/students', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

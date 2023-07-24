@@ -7,7 +7,7 @@ const Profile = () => {
     const {user} = useContext(AuthContext)
     const [userProfile, setUserProfile] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/users/${user?.email}`)
+        fetch(`https://get-addmission-server.vercel.app/users/${user?.email}`)
         .then(res => res.json())
         .then(data => {
             setUserProfile(data);

@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 const Addmission = () => {
     const [myColleges, setMyColleges] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/college')
+        fetch('https://get-addmission-server.vercel.app/college')
         .then(res => res.json())
         .then(data => setMyColleges(data))
     }, [])

@@ -27,7 +27,7 @@ const router = createBrowserRouter([
             {
                 path: "/college/:id",
                 element: <Details></Details>,
-                loader: ({params}) => fetch(`http://localhost:5000/college/${params.id}`)
+                loader: ({params}) => fetch(`https://get-addmission-server.vercel.app/college/${params.id}`)
             },
             {
                 path: '/research',
@@ -44,7 +44,7 @@ const router = createBrowserRouter([
             {
                 path: '/form/:id',
                 element: <Form></Form>,
-                loader: ({params}) => fetch(`http://localhost:5000/college/${params.id}`)
+                loader: ({params}) => fetch(`https://get-addmission-server.vercel.app/college/${params.id}`)
                  
             },
             {
